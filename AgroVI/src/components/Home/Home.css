@@ -1,0 +1,56 @@
+.home-body{
+    width: 100vw;
+    height: 90vh;
+    background-image: url('../res/HOME-BACKGROUND.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.home-body-darkend{
+    width: 100vw;
+    height: 90vh;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-body-content{
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.home-body-content h1{
+    font-size: 3.2vw;
+}
+.home-body-content h5{
+    font-size: 1.5vw;
+}
+.home-btn{
+    all:unset;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    background: none;
+    border: 4px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    border: 4px solid #C74300;
+    background-color: #C74300;
+}
