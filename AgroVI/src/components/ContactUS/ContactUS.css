@@ -1,0 +1,47 @@
+.contact-body{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.contact-box{
+    background-color: rgb(218, 218, 218);
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.contact-box h2{
+    color: rgb(97, 97, 97);
+}
+
+.contact-box p{
+    color: rgb(97, 97, 97);
+    text-align: center;
+}
+
+.contact-info{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-card{
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-card img{
+    width: 40px;
+}

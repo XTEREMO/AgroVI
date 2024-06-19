@@ -2,6 +2,7 @@
 import React from 'react'
 import{ NavLink } from 'react-router-dom';
 import './Navbar.css'
+import status from '../../../server/userLoginStatus'
 const TopNavbar = () => {
   return (
     <>
@@ -13,11 +14,30 @@ const TopNavbar = () => {
                 <li>
                     <NavLink className='top-navbar-menu-item'  to="/">HOME</NavLink>
                 </li>
+
                 <li>
-                    <NavLink className='top-navbar-menu-item' to="/pred">CROP PREDICTION</NavLink>
+                    <NavLink className='top-navbar-menu-item' to="/about">ABOUT</NavLink>
+                </li>
+                
+                <li className={status.state ? "":"hide"}>
+                    <NavLink className='top-navbar-menu-item' to="/crop-recommendation">RECOMMENDATION</NavLink>
+                </li>
+                
+                <li className={status.state ? "":"hide"}>
+                    <NavLink className='top-navbar-menu-item' to="/disease-detection">DISEASE</NavLink>
+                </li>
+                
+                <li className={status.state ? "":"hide"}>
+                    <NavLink className='top-navbar-menu-item' to="/weather">WEATHER</NavLink>
                 </li>
                 <li>
-                    <NavLink className='top-navbar-menu-item' to="/tread">CROP TREADING</NavLink>
+                    <NavLink className='top-navbar-menu-item' to="/contact">CONTACT US</NavLink>
+                </li>
+                <li>
+                    <NavLink className='top-navbar-menu-item' to="/signup">SIGN UP</NavLink>
+                </li>
+                <li>
+                    <NavLink className='top-navbar-menu-item' to="/login">LOG IN</NavLink>
                 </li>
             </ul>
         </div>

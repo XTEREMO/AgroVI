@@ -18,6 +18,7 @@
 .home-body-content{
     color: #fff;
     position: absolute;
+    width: 80vw;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,10 +28,11 @@
     gap:10px;
 }
 .home-body-content h1{
-    font-size: 3.2vw;
+    font-size: 4vw;
 }
 .home-body-content h5{
-    font-size: 1.5vw;
+    font-weight: bold;
+    font-size: 1.8vw;
 }
 .home-btn{
     all:unset;

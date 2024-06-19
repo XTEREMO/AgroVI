@@ -1,0 +1,37 @@
+.not-loged-body{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.not-loged-box{
+    background-color: rgb(218, 218, 218);
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.not-loged-box h2{
+    color: rgb(255, 40, 40);
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.go-to-login{
+    background-color: rgb(146, 251, 85);
+    width: 15vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    color: azure;
+}

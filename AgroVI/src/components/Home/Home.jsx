@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const Home = () => {
+const Home = () => {   
   return (
     <>
         <div className='home-body'>

@@ -1,0 +1,52 @@
+.crop-pred-box{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.crop-pred-form{
+    background-color: rgb(218, 218, 218);
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    gap:15px;
+}
+
+.crop-pred-form p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+    color: #43A047;
+}
+
+.crop-pred-form input{
+    all:unset;
+    width: 50vw;
+    height: 5vh;
+    padding-left: 10px;
+    background-color:rgb(255, 255, 255) ;
+    
+}::placeholder{
+    color: #929191;
+    font-size: 1rem;
+}
+
+.crop-pred-form button{
+    all:unset;
+    margin-top: 10px;
+    background-color: #43A047;
+    width: 15rem;
+    height: 5vh;
+    text-align: center;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: bold;
+}
