@@ -12,6 +12,7 @@ import { useLocation } from 'react-router-dom'
 import CropRecommandation from './components/CropRecommendation/CropRecommandation'
 import DiseaseDetection from './components/DiseaseDetection/DiseaseDetection'
 import Weather from './components/Weather/Weather'
+import TopLoggedNavbar from './components/Nabvar/TopLoggedNavbar'
 import './App.css'
 const App = () => {
   const location = useLocation();
@@ -31,7 +32,7 @@ const App = () => {
   }
   return (
     <div className='App-body'>
-      <TopNavbar />
+      { status.state ? <TopLoggedNavbar/> : <TopNavbar /> }
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
