@@ -1,0 +1,170 @@
+.weather-card::-webkit-scrollbar{
+    display: none;
+}
+
+.weather-page{
+    width:100vw;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.weather-container{
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    width: 40vw;
+    height: 70vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: rgb(9, 121, 30);
+}
+
+.weather-card{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:10px;
+    width:40vw;
+    height:32vh;
+    border-radius:10px;
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+
+.weather-card-items{
+    width:30vw;
+    height:30vh;
+    text-align: end;
+    border-radius:10px;
+    background-color:rgb(255, 255, 255);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.search-field{
+    all:unset;
+    margin-left: 20px;
+    width:38vw;
+    background-color: white;
+}
+
+.search-button{
+    all: unset;
+    margin-right: 10px;
+}
+
+.search-form{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:10px;
+    width:40vw;
+    height:5vh;
+    background-color:white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.environment-condition{
+    width: 38vw;
+    height: 70vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.info{
+    position:absolute ;
+    top:400px;
+    left:2.5vw;
+    height: 24vh;
+    width: 95vw;
+    background-color: rgb(11, 72, 72);
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+}
+.active-info{
+    display: none;
+}
+
+
+.fl-x{
+    display:flex;
+    gap: 40px;
+}
+.fl{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.env-box{
+    width: 15vw;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 154, 18);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 1px rgb(133, 133, 133);
+    color: rgb(255, 255, 255);
+}
+
+
+/*Altitute table.............................................*/
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: white;
+}
+
+.data-table tr:hover {
+    background-color: white;
+}

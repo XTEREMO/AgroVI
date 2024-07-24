@@ -11,14 +11,19 @@ const TopLoggedNavbar = () => {
                 </div>
                 <ul className='top-navbar-menu'>
                     <li>
+                        <NavLink className='top-navbar-menu-item'  to="/feed">News</NavLink>
+                    </li>
+                    <li>
                         <NavLink className='top-navbar-menu-item'  to="/crop-recommendation">RECOMMENDATION</NavLink>
                     </li>
-    
                     <li>
                         <NavLink className='top-navbar-menu-item' to="/disease-detection">DISEASE</NavLink>
                     </li>
                     <li>
                         <NavLink className='top-navbar-menu-item'  to="/weather">WEATHER</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className='top-navbar-menu-item'  to="/profile">Profile</NavLink>
                     </li>
                 </ul>
             </div>

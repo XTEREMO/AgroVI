@@ -1,39 +1,45 @@
 /* eslint-disable no-unused-vars */
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import './LoginSignupStyle.css'
-import userData from '../../../server/TempDatabase/userData'
-import status from '../../../server/userLoginStatus'
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../../Context/AppContext";
 
 const LoginPage = () => {
 
-
-
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
   const navigate = useNavigate();
-  const [errorEmail,setErrorEmail] = useState(false); 
-  const [errorPassword,setErrorPassword] = useState(false); 
+
+  const [loginData,setLoginData] = useState({ email:"", password:"" })
+  const [error,setError] = useState( {email:false,password:false})
+
+  const {appState,dispatch} = useContext(AppContext);
 
 
-  const LoginSubmitForm = (e)=>{
+  const setInput =(e)=>{
+    const {name,value} = e.target;
+    setLoginData({...loginData,[name]:value})
+  }
+
+  const LoginSubmitForm = async(e)=>{
     e.preventDefault();
-    let result = userData.filter(obj => {
-      return obj.userEmail === email 
+    await fetch('http://localhost:8000/login',{
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(loginData),
+    }).then( response=>response.json()).then(data=> {
+      dispatch({ type: "LOGIN_STATUS", value: true });
+      navigate('/crop-recommendation');
     })
-  
-    if(result.length > 0 && result[0].userPassword === password){
-      status.state = true;
-      navigate('/')
-    }
   }
 
   return (
     <>
       <div className="container-box login-box">
         <form onSubmit={LoginSubmitForm}>
-            <input type="text" className={errorEmail?'red-border':''} placeholder="Email" id="username" onChange={(e)=>setEmail(e.target.value)}/>
-            <input type="password" placeholder="Password" id="password" onChange={(e)=>setPassword(e.target.value)}/>
+            <input type="email" name="email" className={error.email?'red-border':''} placeholder="Email" onChange={setInput}/>
+            <input type="password" name="password"  className={error.password?'red-border':''} placeholder="Password" onChange={setInput}/>
 
             <button className="login-btn">Log In</button>
               <div className="social">
